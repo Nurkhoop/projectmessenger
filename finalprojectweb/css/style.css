@@ -1,0 +1,251 @@
+/*  Base styles */
+body {
+  background-color: #f8f9fb;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  padding-bottom: 70px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #e8e8e9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .nav-link {
+  color: #cdc9c9;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #007bff;
+}
+
+.navbar-toggler-icon {
+  background-color: #cdc9c9;
+}
+
+.navbar .navbar-brand {
+  color: #383838 !important;
+  font-weight: 600;
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.card-body h5 {
+  font-weight: 600;
+}
+
+/* Team Section */
+.team-card img {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  height: 240px;
+  object-fit: cover;
+}
+
+/* Groups */
+.group-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.group-card:hover {
+  transform: translateY(-3px);
+}
+
+.group-card button {
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+/* Chat Container */
+.chat-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+}
+
+/* Carousel */
+.carousel-item img {
+  height: 320px;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* Footer */
+footer {
+  color: #f8f9fa;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Make nav links easier to tap on mobile */
+@media (max-width: 576px) {
+  .navbar .nav-link { 
+    padding: 0.5rem 0.75rem; 
+  }
+  .navbar-brand { 
+    font-size: 1.1rem; 
+  }
+  main, .container { 
+    padding-left: 12px; 
+    padding-right: 12px; 
+  }
+
+  .row > [class*="col-"] {
+     margin-bottom: 1rem; 
+    }
+
+  .card { 
+    border-radius: 14px; 
+  }
+  footer .d-flex.flex-md-row {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  footer .d-flex.flex-wrap a {
+    margin-bottom: 6px;
+  }
+}
+
+/* Reduce fixed heights on small screens */
+@media (max-width: 768px) {
+  .team-card img,
+  .carousel-item img { 
+    height: auto !important; 
+    object-fit: cover; 
+  }
+}
+
+/* Keep a pleasant aspect on tablets while not overflowing */
+@media (min-width: 769px) and (max-width: 992px) {
+  .team-card img { 
+    max-height: 260px; 
+    object-fit: cover; 
+  }
+  .carousel-item img { 
+    max-height: 360px; 
+    object-fit: cover; 
+  }
+}
+
+/* Dark theme */
+body.dark {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark .card,
+body.dark .team-card,
+body.dark .group-card,
+body.dark .chat-container,
+body.dark .navbar,
+body.dark footer {
+  background-color: #1e1e1e !important;
+  color: #f1f1f1 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+body.dark .hero .p {
+  color: white !important;
+}
+/* Navbar links */
+body.dark .navbar .nav-link {
+  color: #ccc;
+}
+
+body.dark .navbar .nav-link.active,
+body.dark .navbar .nav-link:hover {
+  color: #00aaff;
+}
+
+/* Cards text */
+body.dark .card h5,
+body.dark .card p,
+body.dark .team-card h5,
+body.dark .team-card p,
+body.dark .group-card h5,
+body.dark .group-card p,
+body.dark .chat-container span,
+body.dark #textfooter,
+body.dark #texthero
+body.dark footer {
+  color: #f1f1f1 !important;
+}
+
+/* Input fields and buttons */
+body.dark input,
+body.dark textarea,
+body.dark select {
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+  border: 1px solid #555;
+}
+
+/* Dark theme for modals */
+body.dark .modal-content {
+  background-color: #1e1e1e !important;
+  color: #f1f1f1 !important;
+  border: 1px solid #333;
+}
+
+body.dark .modal-header,
+body.dark .modal-footer {
+  border-color: #333 !important;
+}
+
+body.dark .modal-title {
+  color: #fff !important;
+}
+
+body.dark .btn-close {
+  filter: invert(1); 
+}
+
+body.dark .form-control,
+body.dark .form-select {
+  background-color: #2a2a2a !important;
+  color: #f1f1f1 !important;
+  border-color: #444 !important;
+}
+
+body.dark .form-control::placeholder {
+  color: #bbb !important;
+}
+
+/* Theme toggle icon */
+#themeToggle::before {
+  content: "☀️"; 
+}
+
+body.dark #themeToggle::before {
+  content: "🌙"; 
+}
